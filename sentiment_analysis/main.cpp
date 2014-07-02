@@ -23,6 +23,7 @@ int main(int argc, char** argv) {
     
     cout<<endl<<endl;;
     for (int i=0; i< 10; i++){
+        cout<<"Sam ti ";
         cout<<"LOX"<<endl;
     }
     
