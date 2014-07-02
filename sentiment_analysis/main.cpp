@@ -7,7 +7,7 @@
 
 #include <cstdlib>
 #include <iostream>
-
+#include <math.h>
 using namespace std;
 
 /*
@@ -15,7 +15,9 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-    cout<<"Hello word!"<<endl<<"лох!";
+    cout<<"Hello word!"<<endl<<"лох!"<<endl;
+    int h=cos(0.5);
+    cout <<h;
     //странно...
     return 0;
 }
