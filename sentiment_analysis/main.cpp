@@ -16,7 +16,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
     cout<<"Hello word!"<<endl<<"лох!";
-    
+    //странно...
     return 0;
 }
 
