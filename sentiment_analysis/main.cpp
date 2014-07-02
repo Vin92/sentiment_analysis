@@ -19,6 +19,14 @@ int main(int argc, char** argv) {
     int h=cos(0.5);
     cout <<h;
     //странно...
+    
+    
+    cout<<endl<<endl;;
+    for (int i=0; i< 10; i++){
+        cout<<"LOX"<<endl;
+    }
+    
+    
     return 0;
 }
 
