@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: Vin92
+ * Author: Vin92,Kirikspb
  *
  * Created on 2 Июль 2014 г., 21:50
  */
