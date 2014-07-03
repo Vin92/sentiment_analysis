@@ -16,7 +16,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
     cout<<"Destroy word!"<<endl<<"Kill them all!"<<endl;
-    Parser();
+    init_dll_parser();
     //странно...
     
     
