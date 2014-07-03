@@ -7,7 +7,7 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <math.h>
+#include "vkParser.h"
 using namespace std;
 
 /*
@@ -15,17 +15,9 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-    cout<<"Hello word!"<<endl<<"лох!"<<endl;
-    int h=cos(0.5);
-    cout <<h;
+    cout<<"Destroy word!"<<endl<<"Kill them all!"<<endl;
+    Parser();
     //странно...
-    
-    
-    cout<<endl<<endl;;
-    for (int i=0; i< 10; i++){
-        cout<<"Sam ti ";
-        cout<<"LOX"<<endl;
-    }
     
     
     return 0;
