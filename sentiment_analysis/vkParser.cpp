@@ -11,13 +11,12 @@ int Parser()
        cout << "Unable to load library!" << endl;
     }
     DllFunc=(char * (*)()) // сдесь надо доделать, зависит от функции в библиотеке
-    GetProcAddress(hLib,"vk_version");
+            GetProcAddress(hLib,"vk_version");
     if (!DllFunc)
   {
     cout<<"Ошибка! ";
   }
    //сдесь вызов функии
-   cout<<DllFunc(); //или что то типо того
+   std::cout<<DllFunc();// или что то типо того
    FreeLibrary(hLib);
 }
-
