@@ -1,7 +1,7 @@
 #include "vkParser.h"
 
 using namespace std;
-void (*DllFunc) ();// сдесь надо доделать, зависит от функции в библиотеке
+char * (*DllFunc) ();// сдесь надо доделать, зависит от функции в библиотеке
 
 int Parser()
 {
@@ -10,14 +10,14 @@ int Parser()
     {
        cout << "Unable to load library!" << endl;
     }
-    DllFunc=(void (*)()) // сдесь надо доделать, зависит от функции в библиотеке
-            GetProcAddress(hLib,"version");
+    DllFunc=(char * (*)()) // сдесь надо доделать, зависит от функции в библиотеке
+    GetProcAddress(hLib,"vk_version");
     if (!DllFunc)
   {
     cout<<"Ошибка! ";
   }
    //сдесь вызов функии
-   //DllFunc(); или что то типо того
+   cout<<DllFunc(); //или что то типо того
    FreeLibrary(hLib);
 }
 
