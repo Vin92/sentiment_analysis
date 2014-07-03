@@ -1,22 +1,22 @@
 #include "vkParser.h"
 
 using namespace std;
-char * (*DllFunc) ();// сдесь надо доделать, зависит от функции в библиотеке
+char * (*Dll_vk_version) ();// сдесь надо доделать, зависит от функции в библиотеке
 
-int Parser()
+int init_dll_parser()
 {
     HINSTANCE hLib=LoadLibrary("libvkparser.DLL");// кинь библиотеку к exe файлу
     if(hLib==NULL) 
     {
        cout << "Unable to load library!" << endl;
     }
-    DllFunc=(char * (*)()) // сдесь надо доделать, зависит от функции в библиотеке
+    Dll_vk_version=(char * (*)()) // сдесь надо доделать, зависит от функции в библиотеке
             GetProcAddress(hLib,"vk_version");
-    if (!DllFunc)
+    if (!Dll_vk_version)
   {
     cout<<"Ошибка! ";
   }
    //сдесь вызов функии
-   std::cout<<DllFunc();// или что то типо того
+   cout<<Dll_vk_version();// или что то типо того
    FreeLibrary(hLib);
 }
