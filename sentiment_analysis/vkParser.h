@@ -1,7 +1,8 @@
 #include <cstdlib>
+#include <windows.h>
 #include <iostream>
 
 
 
-int Parser();
+int init_dll_parser();
   
