@@ -34,6 +34,10 @@ int main(int argc, char** argv) {
     std::cout<<"vk_get_post4 "<<vk_get_post(4)<<std::endl;
     std::cout<<"vk_get_post5 "<<vk_get_post(5)<<std::endl;
     std::cout<<"vk_result_count "<<vk_result_count()<<std::endl;
+    std::cout<<"vk_post_load "<<vk_post_load("search_rez.txt")<<std::endl;
+    std::cout<<"vk_get_post3 "<<vk_get_post(3)<<std::endl;
+    std::cout<<"vk_get_post4 "<<vk_get_post(4)<<std::endl;
+    std::cout<<"vk_get_post5 "<<vk_get_post(5)<<std::endl;
     std::cout<<"vk_free "<<vk_free()<<std::endl;
     
     err=free_dll_parser();

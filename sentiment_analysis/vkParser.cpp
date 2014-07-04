@@ -18,7 +18,7 @@ cfunc dll_vk_init, dll_vk_free;
 cfunc2 dll_vk_version;
 cfunc3 dll_vk_result_count;
 cfunc4 dll_vk_search_news;
-cfunc5 dll_vk_results_save;
+cfunc5 dll_vk_results_save, dll_vk_post_load;
 cfunc6 dll_vk_get_post;
 cfunc7 dll_vk_search_wall;
 
@@ -51,6 +51,9 @@ int init_dll_parser(){
     
     dll_vk_search_wall=(cfunc7)GetProcAddress((HMODULE)_hDll, "vk_search_wall");
     if (dll_vk_search_wall == NULL) return -9;
+    
+    dll_vk_post_load=(cfunc5)GetProcAddress((HMODULE)_hDll, "vk_post_load");
+    if (dll_vk_post_load == NULL) return -7;
       
    return 0;
 }
@@ -102,4 +105,9 @@ std::string vk_get_post(int zn){
 
 int vk_search_wall(std::string zn0, std::string zn1){
     return (int)dll_vk_search_wall(zn0.c_str(), zn1.c_str());
+}
+
+
+int vk_post_load(std::string zn){
+    return (int)dll_vk_post_load(zn.c_str());
 }

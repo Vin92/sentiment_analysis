@@ -22,6 +22,6 @@ int vk_search_news(std::string);
 int vk_results_save(std::string);
 std::string vk_get_post(int);
 int vk_search_wall(std::string, std::string);
-
+int vk_post_load(std::string zn);
 
 #endif
