@@ -1,7 +1,9 @@
 #include "vkParser.h"
 
 using namespace std;
+
 char * (*Dll_vk_version) ();// сдесь надо доделать, зависит от функции в библиотеке
+byte * (*Dll_vk_init) ();
 
 int init_dll_parser()
 {
@@ -12,11 +14,14 @@ int init_dll_parser()
     }
     Dll_vk_version=(char * (*)()) // сдесь надо доделать, зависит от функции в библиотеке
             GetProcAddress(hLib,"vk_version");
-    if (!Dll_vk_version)
+    Dll_vk_init=(byte * (*) ())
+            GetProcAddress(hLib,"vk_init");
+    if ((!Dll_vk_version)||(!Dll_vk_init))
   {
     cout<<"Ошибка! ";
   }
    //сдесь вызов функии
    cout<<Dll_vk_version();// или что то типо того
+   Dll_vk_init();
    FreeLibrary(hLib);
 }
