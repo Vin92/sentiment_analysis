@@ -5,11 +5,13 @@
                    displayName="Исходные файлы"
                    projectFiles="true">
       <itemPath>main.cpp</itemPath>
+      <itemPath>sentiment_analysis.cpp</itemPath>
       <itemPath>vkParser.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Файлы заголовков"
                    projectFiles="true">
+      <itemPath>sentiment_analysis.h</itemPath>
       <itemPath>vkParser.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -40,6 +42,10 @@
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="sentiment_analysis.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sentiment_analysis.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="vkParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="vkParser.h" ex="false" tool="3" flavor2="0">
@@ -66,6 +72,10 @@
         </asmTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sentiment_analysis.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sentiment_analysis.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="vkParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
